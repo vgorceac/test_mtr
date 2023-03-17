@@ -22,7 +22,7 @@ data = json.loads(result)
 #Get lost% packets from json
 loss = data['report']['hubs'][-1]['Loss%']
 
-#Condition if percent of lost pacckets is more than value in lost_trashold
+#Condition if percent of lost pacckets is more than value in lost_thrashold
 if float(loss) > float(lost_thrashold):
     #Get data from json and create readable table for notification
     src = data['report']['mtr']['src']
